@@ -1,0 +1,182 @@
+/*********** Body ***********/
+
+body {
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header {
+	grid-area: header;
+	font-family: 'Source Code Pro', monospace;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.header h1 {
+	margin: 0 auto;
+	font-weight:200;
+}
+
+/*********** Grid Area Wrapper ***********/
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	"navbar"
+	"header"
+	"svgLogo"
+	"content"
+	"footer"
+
+}
+
+/*********** Navbar ***********/
+#navbar {
+  grid-area: navbar;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  transition: bottom 0.3s;
+  z-index: 100;
+}
+
+/* Style the links inside the navigation bar */
+#navbar a {
+
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+/*********** SVG Logo ***********/
+.btrLogo {
+  width: 50%;
+  height: auto;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+   }
+
+#bowtie {
+	transform-origin: 500% 200%;
+	animation: slideDown 1s ease-out forwards, spin 1s ease-out forwards; 
+}
+
+.svgLogoWrapper {
+	grid-area: svgLogo;
+}
+
+/*********** keyframes ***********/
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(1%);
+	}
+	50%{
+		transform: translateY(8000%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}	
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);}
+  50% {
+    transform: rotate(358deg);}	
+  50% {
+    transform: rotate(362deg);}		
+  100% {
+    transform: rotate(360deg); } }
+
+
+/*********** News CSS ***********/
+
+.newsWrapper {
+	width: 100%;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 	2fr 1fr;
+	grid-template-areas: 
+	"navbar navbar"
+	"newsHeader svgNewsLogo"
+	"content content"
+	"footer footer"
+}
+
+.newsWrapper > .newsHeader {
+	grid-area: newsHeader;
+	font-family: 'Source Code Pro', monospace;
+	text-align: left;
+	margin: 0 20px;
+}
+
+.newsHeader h1 {
+	text-align: left;
+	font-weight:200;
+}
+
+.newsWrapper > .svgLogoWrapper {
+	grid-area: svgNewsLogo;
+}
+
+/*********** News SVG Logo ***********/
+
+.svgLogoWrapper {
+	text-align: center;
+}
+
+.btrLogoNews {
+  width: 100px;
+  height: auto;
+  padding: 0;
+  margin: 20px auto 0;
+   }
+
+#bowtie {
+	transform-origin: 500% 200%;
+	animation: slideDown 1s ease-out forwards, spin 1s ease-out forwards; 
+}
+
+.btrLogoNews {
+	animation: shrinkDown 1s ease-out forwards
+}
+
+@keyframes shrinkDown {
+  0% {
+  	transform: translate(-175px,31px);
+    width: 150%;}		
+  100% {
+     } }
