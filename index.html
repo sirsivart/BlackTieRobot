@@ -61,30 +61,55 @@ l47 6 0 138 0 138 -59 6 c-165 18 -269 96 -324 245 -19 52 -21 87 -28 412 -7
                 </g>
             </svg>
         </div>
-        <div id="responsiveDemo" class="mobileGrid">
-            <div class="demoNav"><p>NAV</p></div>
-            <div class="responsiveBox1"></div>
-            <div class="responsiveText1"><p>Lorem Ipsum</p></div>
-            <div class="responsiveBox2"></div>
-            <div class="responsiveText2"><p>Lorem Ipsum</p></div>
+        <div class="responsiveDemoCont">
+            <h2> Websites built for the modern web.</h2>
+            <div id="responsiveDemo" class="mobileGrid">
+                <div id="demoNav" class="demoNav">
+                    <ul>
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>About</li>
+                    </ul> 
+                </div>
+                <div id="demoHead" class="demoHead" style="display:none;">
+                    
+                </div>
+                <div class="responsiveBox1">
+                </div>
+
+                <div class="responsiveText1">
+                    <p>Custom designed sites built for funcionality across all screen sizes.</p>
+                </div>
+                <div class="responsiveBox2">
+                </div>
+                <div class="responsiveText2"><p>Mobile design with the user in mind. Keeping customers on your page longer. </p></div>
+                </div>
+                <div class="buttonWrapper">
+                    <button class="button mobileButton" type="button" 
+                    onclick="
+                    document.getElementById('responsiveDemo').style.width = '200px'
+                    document.getElementById('responsiveDemo').className = 'mobileGrid'
+                    document.getElementById('demoHead').style.display = 'none'
+                    document.getElementById('demoNav').className = 'demoNav'"
+                    >
+                    Mobile</button>
+                    <button class="button tabletButton" type="button" 
+                    onclick="document.getElementById('responsiveDemo').style.width = '300px'
+                    document.getElementById('demoHead').style.display = 'block'
+                    document.getElementById('responsiveDemo').className = 'tabletGrid'
+                    document.getElementById('demoNav').className = 'demoNavTablet'">
+
+                    Tablet</button>
+                    <button class="button desktopButton" type="button" 
+                    onclick="document.getElementById('responsiveDemo').style.width = '711px'
+                    document.getElementById('demoHead').style.display = 'block'
+                    document.getElementById('responsiveDemo').className = 'desktopGrid'
+                    document.getElementById('demoNav').className = 'demoNavDesktop'
+                    ">
+                    Desktop</button>
+                </div>
+            </div>
         </div>
-        <div class="buttonWrapper">
-            <button class="button mobileButton" type="button" 
-                onclick="
-                document.getElementById('responsiveDemo').style.width = '200px'
-                document.getElementById('responsiveDemo').className = 'mobileGrid'
-                ">
-                Mobile</button>
-            <button class="button tabletButton" type="button" 
-                onclick="document.getElementById('responsiveDemo').style.width = '300px'
-                document.getElementById('responsiveDemo').className = 'tabletGrid'">
-                Tablet</button>
-            <button class="button desktopButton" type="button" 
-                onclick="document.getElementById('responsiveDemo').style.width = '711px'
-                document.getElementById('responsiveDemo').className = 'desktopGrid'">
-                Desktop</button>
-        </div>
-    </div>
     <script src="js/main.js"></script>
 </body>
 
