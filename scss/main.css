@@ -102,8 +102,13 @@ body {
   .responsiveDemoCont h2 {
     font-family: 'Source Code Pro', monospace;
     margin: 0 auto;
-    padding: 0 0 20px 0;
+    padding: 0 0 10px 0;
     text-align: center; }
+  .responsiveDemoCont p {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 0 20px 0; }
 
 #responsiveDemo {
   margin: 0 auto;
@@ -267,15 +272,23 @@ body {
   grid-area: buttonWrapper;
   margin: 0 auto;
   padding: 20px 0 0 0;
-  width: 50%;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; }
 
 .button {
-  margin: 5px auto;
+  margin: 2px auto;
   font-family: 'Source Code Pro', monospace;
-  padding: 10px 10px;
-  border-radius: 5px; }
+  padding: 10px 2px;
+  border-radius: 5px;
+  border-width: 0;
+  border-style: none;
+  background-color: silver; }
+  .button:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+  .button:focus {
+    outline: black auto 5px; }
 
 /*********** Rainbow Animation ***********/
 @-webkit-keyframes rainbow {
