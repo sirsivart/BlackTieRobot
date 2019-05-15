@@ -323,12 +323,21 @@ body {
 .solutionsWrapper {
   width: 100%;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 0px;
   grid-template-columns: 2fr 1fr;
-  grid-template-areas: "navbar navbar" "newsHeader svgNewsLogo" "content content" "footer footer"; }
+  grid-template-areas: "navbar navbar" "headerWrapper headerWrapper" "solutionsContent solutionsContent" "footer footer"; }
 
-.solutionsWrapper > .solutionsHeader {
-  grid-area: newsHeader;
+.headerWrapper {
+  grid-area: headerWrapper;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "solutionsHeader svgSolutionsLogo";
+  border-bottom: solid #4CAF50 2px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.75); }
+
+.headerWrapper > .solutionsHeader {
+  grid-area: solutionsHeader;
   font-family: 'Source Code Pro', monospace;
   text-align: left;
   margin: 0 20px; }
@@ -337,15 +346,18 @@ body {
   text-align: left;
   font-weight: 200; }
 
-.solutionsWrapper > .svgLogoWrapper {
-  grid-area: svgNewsLogo; }
+.headerWrapper > .svgLogoWrapper {
+  grid-area: svgSolutionsLogo; }
+
+.solutionsContent {
+  grid-area: solutionsContent; }
 
 /*********** Solutions SVG Logo ***********/
 .btrLogoSolutions {
   width: 100px;
   height: auto;
-  padding: 0;
-  margin: 20px auto 0; }
+  padding: 5px 0 0 0;
+  margin: 0px auto 0; }
 
 #solutionsBowtie {
   transition: left 0.3s ease; }
