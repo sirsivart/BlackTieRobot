@@ -350,7 +350,13 @@ body {
   grid-area: svgSolutionsLogo; }
 
 .solutionsContent {
-  grid-area: solutionsContent; }
+  grid-area: solutionsContent;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center; }
+
+.container {
+  border-bottom: solid #4CAF50 2px; }
 
 /*********** Solutions SVG Logo ***********/
 .btrLogoSolutions {
