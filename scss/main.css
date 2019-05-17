@@ -340,7 +340,7 @@ body {
   grid-area: solutionsHeader;
   font-family: 'Source Code Pro', monospace;
   text-align: left;
-  margin: 0 20px; }
+  margin: 0 10px; }
 
 .solutionsHeader h1 {
   text-align: left;
@@ -356,7 +356,8 @@ body {
   text-align: center; }
 
 .container {
-  border-bottom: solid #4CAF50 2px; }
+  border-bottom: solid #4CAF50 2px;
+  background-color: #f2f2f2; }
 
 /*********** Solutions SVG Logo ***********/
 .btrLogoSolutions {
