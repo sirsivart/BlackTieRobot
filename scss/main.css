@@ -31,6 +31,11 @@ body {
   width: 100%;
   transition: bottom 0.3s;
   z-index: 150; }
+  @media only screen and (min-device-width: 768px) {
+    #navbar {
+      position: sticky;
+      top: 0;
+      transition: top 0.3s; } }
 
 /* Style the links inside the navigation bar */
 #navbar a {

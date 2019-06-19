@@ -30,7 +30,13 @@ body {
   bottom: 0;
   width: 100%;
   transition: bottom 0.3s;
-  z-index: 150; }
+  z-index: 150;
+  @media only screen and (min-device-width : 768px) {
+    position: sticky;
+    top: 0;
+    transition: top 0.3s;
+   }
+  }
 
 /* Style the links inside the navigation bar */
 #navbar a {
